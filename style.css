@@ -1,0 +1,231 @@
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	font-family: 'Times New Roman', Times, serif;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: linear-gradient(to top right, red, blue);
+}
+.container {
+	width: 100%;
+	height: auto;
+	display: grid;
+	justify-content: center;
+	margin-top: 7%;
+}
+
+.game-container {
+	display: grid;
+	grid-template-columns: 300px 200px 100px 200px 100px 200px 300px;
+	grid-template-rows: 100px 100px 250px 100px 100px 100px;
+	gap: 10px;
+}
+
+.game-btn {
+	display: flexbox;
+	grid-column: 2 / 7;
+	grid-row: 1/7;
+	background-color: rgba(0, 0, 0, 0.5);
+
+	border-radius: 15%;
+	z-index: 8;
+}
+.newgame {
+	display: grid;
+	width: 20%;
+	height: 20%;
+	border-radius: 20%;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgb(255, 255, 255, 0.5);
+	align-content: center;
+	border: none;
+	font-size: 2vw;
+}
+.newgame:active {
+	background-color: rgba(255, 255, 255, 0.9);
+	box-shadow: 5px 5px 15px rgb(255, 255, 255);
+	color: blue;
+}
+
+.roll {
+	display: grid;
+	width: 20%;
+	height: 20%;
+	border-radius: 50%;
+	margin-top: 45%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgb(255, 255, 255, 0.5);
+	align-content: center;
+	font-size: 2vw;
+	border: none;
+	z-index: 10;
+}
+.roll:active {
+	background-color: rgba(255, 255, 255, 0.9);
+	box-shadow: 5px 5px 15px rgb(255, 255, 255);
+	color: red;
+}
+.player-1 {
+	display: grid;
+	grid-template-rows: 150px 80px 100px 80px 100px;
+	grid-column: 1/4;
+	grid-row: 2/6;
+	background-color: rgb(219, 219, 219);
+	opacity: 40%;
+	border-radius: 25%;
+	z-index: 9;
+}
+.box1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 4vw;
+	font-family: Arial, Helvetica, sans-serif;
+	color: crimson;
+}
+.score-1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2vw;
+	border-bottom: 1px solid black;
+	margin-left: 30%;
+	margin-right: 30%;
+}
+
+.player-1 > #score {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	font-size: 4vw;
+	margin-left: 30%;
+	margin-right: 30%;
+	color: crimson;
+}
+
+.p1-game-score {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5vw;
+	margin-top: 5%;
+	border-bottom: 1px solid black;
+	margin-left: 30%;
+	margin-right: 30%;
+}
+
+.player-1 > #game-score {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	font-size: 4vw;
+	margin-left: 30%;
+	margin-right: 30%;
+	color: crimson;
+}
+
+.player-2 {
+	display: grid;
+	grid-template-rows: 150px 80px 100px 80px 100px;
+	grid-column: 5/8;
+	grid-row: 2/6;
+	background-color: rgb(219, 219, 219);
+	border-radius: 25%;
+	opacity: 40%;
+	z-index: 9;
+}
+.box2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 4vw;
+	font-family: Arial, Helvetica, sans-serif;
+	color: darkblue;
+}
+.score-2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2vw;
+	border-bottom: 1px solid black;
+	margin-left: 30%;
+	margin-right: 30%;
+}
+
+#score {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	font-size: 4vw;
+
+	margin-left: 30%;
+	margin-right: 30%;
+	color: darkblue;
+}
+
+.p2-game-score {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5vw;
+	margin-top: 5%;
+	border-bottom: 1px solid black;
+	margin-left: 30%;
+	margin-right: 30%;
+}
+#game-score {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	font-size: 4vw;
+
+	margin-left: 30%;
+	margin-right: 30%;
+	color: darkblue;
+}
+
+.main-frame {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	grid-column: 3/6;
+	grid-row: 3/5;
+	background: none;
+	border-radius: 50%;
+
+	z-index: 10;
+}
+.dice {
+	width: 50%;
+	height: 50%;
+}
+
+.wait {
+	opacity: 40%;
+}
+.play {
+	opacity: 100%;
+}
+.winner {
+	background-color: rgb(255, 255, 255);
+	animation-name: colorchange;
+	animation-duration: 1s;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+}
+@keyframes colorchange {
+	33% {
+		background-color: #f0dd0d;
+	}
+	55% {
+		background-color: aqua;
+	}
+	100% {
+		background-color: rgb(28, 236, 0);
+	}
+}
